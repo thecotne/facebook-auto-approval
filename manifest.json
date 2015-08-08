@@ -1,0 +1,18 @@
+{
+	"name": "facebook-auto-approval",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"description": "facebook auto approval",
+	// "icons": {
+	// 	"16": "icons/icon16.png",
+	// 	"19": "icons/icon19.png",
+	// 	"48": "icons/icon48.png",
+	// 	"128": "icons/icon128.png"
+	// },
+	"content_scripts": [{
+		"js": ["dist/autoApproval.bundle.js"],
+		"include_globs": ["*://*.facebook.com/groups/785323994921883/requests*"],
+		"matches": ["<all_urls>"],
+		"run_at": "document_end"
+	}]
+}
